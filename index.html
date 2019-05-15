@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang = "en-US">
+<head>
+    <meta charset = "UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Assignment 3 - Maze Game</title>
+</head>
+<body onload = "initialize()">
+    <h1 id = "title">Maze Game</h1>
+    <div id = "outerBox">
+        
+        
+        <div id = "sideBar">
+            <hr>
+            <h2>Controls</h2>
+            <input type="button" id="startButton" value="Start New Game" onclick="startNewGame();"></input>
+            
+            
+            <hr>
+            <h2>Name</h2>
+            <input type="text" id="name" maxlength="3" value="AAA"></input>
+            <hr>
+            <h2>Preset Gameboard Sizes</h2>
+            <div>
+                <input type="button" id="startButton" value="5 x 5" onclick="startNewGame_5x5();"></input>
+                <input type="button" id="startButton" value="10x10" onclick="startNewGame_10x10();"></input>
+            </div>
+            <div>
+                <input type="button" id="startButton" value="15x15" onclick="startNewGame_15x15();"></input>
+                <input type="button" id="startButton" value="20x20" onclick="startNewGame_20x20();"></input>
+            </div>
+            
+            <hr>
+            <h2>Controls</h2>
+                <ul id="control_list">
+                    <li>Hint toggle : Keyboard 'h'</li>
+                    <li>Breadcrumbs toggle : Keyboard 'b'</li>
+                    <li>Path to finish toggle : Keyboard 'p'</li>
+                </ul>
+            <hr>
+        </div>
+
+        <div id = "gameCanvas">
+            <canvas id = "id-canvas"
+                width = "700" height = "700">
+            </canvas>
+        </div>
+
+    
+        <div id="scoreBox">
+            <hr>
+            <p><h2>Time</h2></p>
+            <p id="timer">0</p>
+            <hr>
+            <p><h2>Score</h2></p>
+            <p id="currentScore">0</p>
+            <hr>
+            <div id="list">
+                    <h2>Top 3 Scores</h2>
+                    <ol id="scoreList"></ol>
+            </div>
+            <hr>
+        </div>
+        
+        
+
+        
+    </div>
+    <p id="footer">Created for CS 5410</p>
+    
+
+    <script src = "scripts/main.js"></script>
+    
+</body>
+</html>
